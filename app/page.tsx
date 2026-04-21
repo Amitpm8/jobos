@@ -15,7 +15,7 @@ function Container({ children }: { children: React.ReactNode }) {
 function Logo() {
   return (
     <a
-      href="#top"
+      href="/"
       className="group inline-flex items-center gap-2 rounded-lg px-2 py-1 outline-none focus-visible:ring-2 focus-visible:ring-violet-400/70"
       aria-label="JobOS Home"
     >
@@ -202,17 +202,17 @@ export default function Home() {
             <Logo />
             <nav className="hidden items-center gap-1 sm:flex">
               <NavLink href="#features">Features</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-              <NavLink href="#about">About</NavLink>
+              <NavLink href="#why">Why JobOS</NavLink>
+              <NavLink href="#cta">Get Started</NavLink>
             </nav>
             <div className="flex items-center gap-3">
               <a
-                href="#features"
-                className="hidden rounded-md px-3 py-2 text-sm font-medium text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/70 sm:inline-flex"
+                href="/dashboard"
+                className="hidden rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/10 transition hover:bg-white/8 hover:ring-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/70 sm:inline-flex"
               >
-                View
+                Dashboard
               </a>
-              <Button href="#cta">Get Started</Button>
+              <Button href="/dashboard">Start Free</Button>
             </div>
           </div>
         </Container>
@@ -235,7 +235,7 @@ export default function Home() {
                   with clarity.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <Button href="#cta">Start Free</Button>
+                  <Button href="/dashboard">Start Free</Button>
                   <Button href="#demo" variant="secondary">
                     View Demo
                   </Button>
@@ -270,9 +270,21 @@ export default function Home() {
 
                   <div className="mt-5 grid gap-3">
                     {[
-                      { role: "Frontend Engineer", company: "Aurora Labs", status: "Interview" },
-                      { role: "Product Designer", company: "Northwind", status: "Follow-up" },
-                      { role: "Full-stack Engineer", company: "Helio", status: "Applied" },
+                      {
+                        role: "Frontend Engineer",
+                        company: "Aurora Labs",
+                        status: "Interview",
+                      },
+                      {
+                        role: "Product Designer",
+                        company: "Northwind",
+                        status: "Follow-up",
+                      },
+                      {
+                        role: "Full-stack Engineer",
+                        company: "Helio",
+                        status: "Applied",
+                      },
                     ].map((item) => (
                       <div
                         key={`${item.company}-${item.role}`}
@@ -349,7 +361,7 @@ export default function Home() {
         </Section>
 
         <Section
-          id="about"
+          id="why"
           eyebrow="Why JobOS"
           title="Built for real job seekers, not spreadsheets"
           description="Most people lose opportunities because details live in tabs, inboxes, and memory. JobOS brings calm to the chaos — a single place to capture every application, prepare for interviews, and follow up on time."
@@ -379,91 +391,6 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section
-          id="pricing"
-          eyebrow="Pricing"
-          title="Simple pricing for a focused job search"
-          description="Start free, upgrade when you want more visibility into your pipeline."
-        >
-          <div className="grid gap-4 lg:grid-cols-2">
-            <div className="rounded-2xl bg-white/5 p-7 ring-1 ring-white/10">
-              <div className="flex items-start justify-between gap-6">
-                <div>
-                  <p className="text-sm font-semibold text-white">Free</p>
-                  <p className="mt-2 text-sm text-white/70">
-                    Great for getting organized fast.
-                  </p>
-                </div>
-                <p className="text-3xl font-semibold tracking-tight text-white">
-                  $0
-                </p>
-              </div>
-              <ul className="mt-6 space-y-3 text-sm text-white/70">
-                <li className="flex gap-3">
-                  <span className="mt-1 size-1.5 rounded-full bg-emerald-400/80" />
-                  Track applications and statuses
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 size-1.5 rounded-full bg-emerald-400/80" />
-                  Notes, links, and tags
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 size-1.5 rounded-full bg-emerald-400/80" />
-                  Basic reminders
-                </li>
-              </ul>
-              <div className="mt-8">
-                <Button href="#cta">Start Free</Button>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-2xl bg-white/5 p-7 ring-1 ring-white/10">
-              <div className="pointer-events-none absolute -top-24 left-1/2 h-56 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-violet-500/25 via-cyan-400/15 to-transparent blur-3xl" />
-              <div className="relative">
-                <div className="flex items-start justify-between gap-6">
-                  <div>
-                    <p className="inline-flex items-center gap-2 text-sm font-semibold text-white">
-                      Pro
-                      <span className="rounded-full bg-white/5 px-2 py-0.5 text-[11px] font-semibold text-white/70 ring-1 ring-white/10">
-                        Recommended
-                      </span>
-                    </p>
-                    <p className="mt-2 text-sm text-white/70">
-                      For high-volume applications and deeper insights.
-                    </p>
-                  </div>
-                  <p className="text-3xl font-semibold tracking-tight text-white">
-                    $8
-                    <span className="text-sm font-semibold text-white/60">
-                      /mo
-                    </span>
-                  </p>
-                </div>
-                <ul className="mt-6 space-y-3 text-sm text-white/70">
-                  <li className="flex gap-3">
-                    <span className="mt-1 size-1.5 rounded-full bg-violet-400/80" />
-                    Smart analytics and insights
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 size-1.5 rounded-full bg-violet-400/80" />
-                    Advanced reminders + follow-up workflows
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 size-1.5 rounded-full bg-violet-400/80" />
-                    Priority templates and exports
-                  </li>
-                </ul>
-                <div className="mt-8 flex flex-wrap items-center gap-3">
-                  <Button href="#cta">Get Started</Button>
-                  <Button href="#demo" variant="secondary">
-                    View Demo
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Section>
-
         <section id="demo" className="py-16 sm:py-24">
           <Container>
             <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 sm:p-10">
@@ -476,13 +403,12 @@ export default function Home() {
                     A premium workflow — without the clutter
                   </h2>
                   <p className="mt-4 text-sm leading-6 text-white/70">
-                    This landing page is a placeholder for the app experience.
-                    When you’re ready, we can swap this area for real screenshots
-                    or an interactive demo.
+                    Visit the dashboard to add applications, track status, and
+                    keep momentum.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <Button href="#cta">Start Free</Button>
+                  <Button href="/dashboard">Open Dashboard</Button>
                   <Button href="#features" variant="secondary">
                     Explore Features
                   </Button>
@@ -510,9 +436,9 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3">
-                  <Button href="#top">Start Free Today</Button>
-                  <Button href="#pricing" variant="secondary">
-                    View Pricing
+                  <Button href="/dashboard">Start Free Today</Button>
+                  <Button href="#features" variant="secondary">
+                    View Features
                   </Button>
                 </div>
               </div>
