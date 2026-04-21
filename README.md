@@ -1,3 +1,41 @@
+# JobOS 🚀
+
+JobOS is a modern job application tracking platform built to help job seekers manage applications, interviews, follow-ups, and career progress in one place.
+
+## Features
+
+- Add and track job applications
+- Dashboard with application stats
+- Search and filter jobs
+- Update status (Applied, Interview, Rejected, Offer)
+- Delete applications
+- Email magic link authentication
+- Responsive modern UI
+- Supabase backend
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Supabase
+- Vercel
+
+## Roadmap
+
+- Gmail integration
+- Smart reminders
+- Analytics
+- Premium subscriptions
+- Recruiter tools
+- AI resume tools
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
